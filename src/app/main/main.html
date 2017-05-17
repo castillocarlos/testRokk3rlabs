@@ -1,7 +1,10 @@
 
 <div ng-controller="MainController as main" >
-    <h1>Hola {{main.hola}}</h1>
-    <input data-ng-model="main.name" />
-    <button ng-click="main.enviar()" >enviar </button>
+    <div style="width: 45%">
+        <canvas id="line" class="chart chart-line" chart-data="main.data"
+                chart-labels="main.labels" chart-series="main.series" chart-options="main.options"
+                chart-dataset-override="main.datasetOverride" chart-click="main.onClick">
+        </canvas>
+    </div>
 </div>
 
