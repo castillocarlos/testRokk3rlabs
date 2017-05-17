@@ -10,6 +10,9 @@
   function MainController($state,$rootScope,$scope,$stateParams, mainData, $interval) {
     var main = this;
     main.dataOriginal={};
+    main.series=[];
+    main.labels=[];
+    main.data=[];
     main.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
     main.options = {
       scales: {
@@ -29,16 +32,16 @@
         ]
       }
     };
+    main.goNews = function () {
+      $state.go('new');
+    }
     mainData.getDataChart().then(function (data) {
-      main.series=[];
-      main.labels=[];
-      main.data=[];
       for(var i =0; i < data.length;i++){
         main.dataOriginal = data;
         main.series.push(data[i].zoneId);
         main.labels.push(data[i].data.speed);
         main.data.push([Math.random(data[i].data.count)*100,Math.random(data[i].data.count)*90,Math.random(data[i].data.count)*80,Math.random(data[i].data.count)*85,Math.random(data[i].data.count)*95]);
-        $interval(updateTime,10000);
+        $interval(updateTime,60000);
       }
     });
     function updateTime() {
