@@ -1,0 +1,26 @@
+{
+  "name": "testRokk3rlabs",
+  "homepage": "https://github.com/castillocarlos/testRokk3rlabs",
+  "authors": [
+    "castlec23 <castlec23@gmail.com>"
+  ],
+  "description": "testRokk3rlabs",
+  "main": "index",
+  "keywords": [
+    "testRokk3rlabs"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "chart.js": "^2.5.0"
+  }
+}
